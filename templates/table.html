@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/static/style.css" />
+
+    </head>
+    <body>
+        <table class="tables">
+            <tr class="table__header">
+                {% for header in headings %}
+                    <th class="table__cell">{{ header }}</th>
+                {% endfor %}
+            </tr>
+
+            {% for i in range(5) %}
+                <tr>
+                    <td>{{ video_title[i].text }}</td>
+                    <td>{{ url_list[i] }}</td>
+                    <td>{{thumb[i]}}</td>
+                    <td>{{kk[i]}}</td>
+                    <td>{{din[i]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
